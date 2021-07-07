@@ -1,7 +1,7 @@
 //parameters azure firewall
 param location string = resourceGroup().location
 param azureFirewallName string = 'az-fw-test'
-param avdipgroupname string = '/subscriptions/a2899dc7-f46b-4ba8-a492-1b957352eefd/resourceGroups/FW_Bicep_Test/providers/Microsoft.Network/ipGroups/AVD_Test_IPGroup'
+param avdipgroupid string = ''
 
 
 // variables
@@ -42,7 +42,7 @@ resource azureFirewall 'Microsoft.Network/azureFirewalls@2020-07-01' = {
                 '*xt.blob.core.windows.net'
               ]
               sourceIpGroups: [
-                avdipgroupname
+                avdipgroupid
               ]
             }
 
@@ -58,7 +58,7 @@ resource azureFirewall 'Microsoft.Network/azureFirewalls@2020-07-01' = {
                 '*xt.table.core.windows.net'
               ]
               sourceIpGroups: [
-                avdipgroupname
+                avdipgroupid
               ]
             }
 
@@ -74,7 +74,7 @@ resource azureFirewall 'Microsoft.Network/azureFirewalls@2020-07-01' = {
                 '*eh.servicebus.windows.net'
               ]
               sourceIpGroups: [
-                avdipgroupname
+                avdipgroupid
               ]
 
             }
@@ -91,7 +91,7 @@ resource azureFirewall 'Microsoft.Network/azureFirewalls@2020-07-01' = {
                 'www.msftconnecttest.com'
               ]
               sourceIpGroups: [
-                avdipgroupname
+                avdipgroupid
               ]
             }
 
@@ -107,7 +107,7 @@ resource azureFirewall 'Microsoft.Network/azureFirewalls@2020-07-01' = {
                 'WindowsVirtualDesktop'
               ]
               sourceIpGroups: [
-                avdipgroupname
+                avdipgroupid
               ]
             }
 
@@ -141,7 +141,7 @@ resource azureFirewall 'Microsoft.Network/azureFirewalls@2020-07-01' = {
                 ]
   
                 sourceIpGroups: [
-                  avdipgroupname
+                  avdipgroupid
                 ]
                 }
                 
@@ -161,7 +161,7 @@ resource azureFirewall 'Microsoft.Network/azureFirewalls@2020-07-01' = {
                     ]
       
                     sourceIpGroups: [
-                      avdipgroupname
+                      avdipgroupid
                     ]
                     }
 
@@ -179,7 +179,7 @@ resource azureFirewall 'Microsoft.Network/azureFirewalls@2020-07-01' = {
                         ]
           
                         sourceIpGroups: [
-                          avdipgroupname
+                          avdipgroupid
                         ]
                         }
 
@@ -206,7 +206,7 @@ resource azureFirewall 'Microsoft.Network/azureFirewalls@2020-07-01' = {
                             ]
               
                             sourceIpGroups: [
-                              avdipgroupname
+                              avdipgroupid
                             ]
                             }
 

@@ -197,4 +197,8 @@ resource azureFirewallDiagnostics 'Microsoft.Insights/diagnosticSettings@2017-05
 //modules
 
 //AVD Module
-module AVD_FW_Rules './modules/AzureVirtualDesktop/avd_azfw.bicep' 
+module AVD  '.\Modules\AzureVirtualDesktop\avd_azfw.bicep' = {
+  name: AVDFWRules 
+  
+}
+
